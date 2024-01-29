@@ -1,0 +1,193 @@
+/* Trvail d'équipe 2 */
+/* Fichier styles.css */
+/* Trystan Piette */
+
+/* Réinitialisation des marges et des rembourrages pour l'ensemble de la page */
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* Styles pour le conteneur du titre */
+.title-container {
+  height: 150px;
+  margin: 1%; /* Marge de 1% autour du conteneur du titre */
+  padding: 1%; /* Rembourrage de 1% à l'intérieur du conteneur du titre */
+
+  border-radius: 5px;
+  border: 1px solid;
+
+  display: flex; /* Utilisation de flexbox pour le positionnement du titre*/
+  justify-content: space-between; /* Alignement horizontal avec espace entre les éléments */
+  align-items: center; /* Alignement vertical au centre */
+}
+
+/* Styles pour la bannière */
+.banner {
+  height: auto; /* Hauteur automatique */
+  width: 350px; /* Largeur de 200 pixels */
+}
+
+/* Styles pour le titre */
+.title {
+  font-size: 25px;
+  font-family: "Yatra One", sans-serif; /* Taille de police et famille de police pour le titre*/
+}
+
+/* Styles pour le conteneur de contenu */
+.content-container {
+  margin: 1%;
+  margin-top: 1%; /* Marge de 1% en haut du conteneur de contenu */
+  display: flex; /* Utilisation de flexbox pour le positionnement */
+  align-items: flex-start; /* Alignement vertical en haut (flex-start) */
+  /*justify-content: space-between;*/
+}
+
+/* Styles pour la navigation */
+.nav {
+  min-width: 200px; /* Largeur minimale de 200 pixels */
+  width: 10%; /* Largeur de 10% */
+  padding: 0;
+  margin: 0;
+  border: 1px solid;
+  list-style-type: none; /* Suppression des puces de liste */
+  border-radius: 5px;
+}
+
+.nav > li {
+  padding: 2%;
+  padding-left: 15px;
+  padding-right: 10px;
+  border-bottom: 1px solid;
+}
+
+.nav > li:last-child {
+  border-bottom: none;  /* Suppression de la double bordure */
+}
+
+.nav > li:hover {
+  background-color: lightgray;
+  color: white;
+  font-weight: bold;
+}
+
+section > * {
+  margin: 20px;
+}
+
+section :last-child {
+  margin: 0;
+  margin-top: 20px;
+}
+
+/* Styles pour les tableaux d'activités */
+.table-activites {
+  width: 100%;
+  border: 1px solid;
+  border-collapse: collapse;
+}
+
+.table-activites th {
+  color: white;
+  background-color: lightgray;
+  border: 1px solid #000;
+}
+
+.table-activites td {
+  border: 1px solid;
+  padding-left: 5px;
+}
+
+.table-activites td:first-child,
+.table-activites td:last-child {
+  text-align: center;
+  padding-left: 0;
+}
+
+
+/* Styles pour accueil */
+.accueil {
+  width: 100%;
+  margin-left: 10px; 
+  border-radius: 5px;
+  border: 1px solid;
+  padding: 10px 10px;
+
+}
+
+.accueil li {
+  margin: 0;  /* Supprime l'espace vide entre l'élément 2 et l'élément 3 de la liste */
+  padding: 0;
+}
+
+.inscription {
+  display: none;  /*Permet de le cacher jusqu'à temps que jQuery l'appelle */
+  width: 100%;
+  margin-left: 10px; 
+  border-radius: 5px;
+  border: 1px solid;
+  padding: 10px 10px;
+}
+
+/* Styles pour les items du form de l'inscription */
+.inscription .form-item {
+  width: 25%;
+  display: flex;
+}
+
+.inscription .form-item-textarea {
+  width: 25%; /* Use a percentage-based width */
+  height: 100px;
+  display: flex; /* Remove align-items to place the label at the top-left */
+}
+
+input[type="radio"] {
+  margin-top: 10px;
+  margin-left: 25px;
+}
+
+label[for="sexe"] {
+  margin-right: 125px;
+}
+
+label[for="activité"] {
+  padding-top: 15px;
+}
+
+label,
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+  width: 40%;
+  text-align: left;
+  margin-top: 10px;
+  padding: 5px;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+  width: 60%;
+  margin-left: 0;
+}
+
+/* Styles pour le google maps */
+.carte {
+  display: none;
+  width: 100%;
+  margin-left: 10px; 
+  border-radius: 5px;
+  border: 1px solid;
+  padding: 10px 10px;
+}
+iframe{
+  width: 100%;
+  height: 312px; 
+}

@@ -1,0 +1,119 @@
+<!-- Trvail d'équipe 2 -->
+<!-- tp1.html -->
+<!-- Trystan Piette -->
+<!DOCTYPE html>
+    <html lang="fr"> <!-- langue du fichier html -->
+      <head>
+        <meta charset="UTF-8" /> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />  <!-- lien vers le fichier css -->
+    <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap"  rel="stylesheet" /> <!-- lien vers le font au header -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> <!-- lien vers le api du google maps -->
+    <script src="myscripts.js"></script> <!-- lien vers le fichier javascript -->
+    </head>
+    <body>
+        <header class="title-container">
+          <img class="banner" src="imgs/UQTR-banner.png" alt=""/> <!-- image de l'UQTR -->
+          <h3 class="title">Loisir pour les étudiants !</h3>
+        </header>
+        
+        <div class="content-container"> <!--  menu intéractif à l'aide de buttons -->
+          <ul class="nav">  
+          <li class="button_accueil">Accueil</li>
+          <li class="button_inscription">S'inscire</li>
+          <li class="button_carte">Localisé une activité</li>
+          </ul>
+    
+          <section class="accueil"> <!-- informations de accueil -->
+            <strong>Notre but</strong>
+            <p>
+              Notre site propose aux étudiants désireux de réaliser une ou plusiers
+              activités de loisir de rejoindre différentes activités proposées dans
+              la liste suivante en # étapes:
+            </p>
+            <ul>
+              <li>Accueil</li>
+              <li>S'inscire</li>
+              <li>Localisé une activité</li>
+            </ul>
+            <p>
+              Les différentes activités des groupes sont sous la responsabilité de
+              professionnelles. Il s'agit de passionnés du domaine quivous feront
+              découvrir des pans inédits de vos loisirs proférés.
+              Qu'attendez-vous...? Rejoidnez-nous!
+            </p>
+            <strong>Liste des activités disponibles</strong>
+            <table id="table-activites" class="table-activites">   <!-- table intéractive de accueil qui peut se faire sort -->          
+                <tr>
+                  <th onclick="sortTable(0)">#</th> <!-- fonction js qui permet le triage  -->    
+                  <th onclick="sortTable(1)">Activités</th>
+                  <th onclick="sortTable(2)">Responsables</th>
+                  <th onclick="sortTable(3)">Nombres d'Inscrits</th>
+                </tr>
+            </table>
+          </section>
+          
+    
+    
+          <section class="inscription"> <!-- form de l'inscription -->
+            <strong>Inscrivez vous</strong>
+          
+            <form name="formulaireActivites" onsubmit="return validateForm()" method="post">
+              <div class="form-item">
+                <label for="nom">Nom</label>
+                <input type="text" name="nom">
+              </div>
+          
+              <div class="form-item">
+                <label for="prénom">Prénom</label>
+                <input type="text" name="prénom">
+              </div>
+          
+              <div class="form-item">
+                <label for="date_de_naissance">Date de naissance</label>
+                <input type="date" id="date_de_naissance" name="date_de_naissance" max="">
+              </div>
+          
+         
+                <label for="sexe">Sexe</label>
+                <input type="radio" id="homme" name="sexe" value="Homme">
+                <label for="homme">Homme</label>
+                <input type="radio" id="femme" name="sexe" value="Femme">
+                <label for="femme">Femme</label>
+          
+              <div class="form-item">
+                <label for="activité">Activité</label>
+                <select name="activité" id="activité">
+                  <option value="natation">Natation</option>
+                  <option value="badminton">Badminton</option>
+                  <option value="randonnée">Randonnée</option>
+                  <option value="kayak">Kayak</option>
+                  <option value="vélo">Vélo</option>
+                  <option value="échecs">Échecs</option>
+                </select>
+              </div>
+          
+              <div class="form-item-textarea">
+                <label for="message">Motivations</label>
+                <textarea name="message" rows="10" cols="30" maxlength="300"></textarea>
+              </div>
+          
+             
+                <input type="reset" value="Réinitialiser"> <!-- button qui efface le tout -->  
+                <input type="submit" value="Valider"> <!-- button qui confirme le tout -->  
+            </form>
+          </section>
+    
+          <section class="carte"> <!-- google maps de l'UQTR de carte -->            
+            <strong>Google Maps de l'UQTR</strong>
+            <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5508.253887913261!2d-72.58803690642097!3d46.34702489999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc7c8cb9aadbb03%3A0x36f5dd28a30395a8!2sTrois-Rivieres%20Campus!5e0!3m2!1sen!2sca!4v1699511291209!5m2!1sen!2sca"style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p> <!-- localisation de l'UQTR à partir de l'API -->
+        </section>
+    
+        
+        </div>
+      </body>
+    </html>
+
+
+
+    
